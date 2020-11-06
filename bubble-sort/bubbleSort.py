@@ -1,3 +1,5 @@
+# time complexity: O(n^2) space complexity: O(1)
+
 def bubbleSort(array):
     counter = 0
     lastIdx = len(array) - 1
