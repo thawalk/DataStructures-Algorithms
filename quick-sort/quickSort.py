@@ -1,36 +1,32 @@
 # time complexity: worst: O(n^2) ave: O(nlog(n)),  space complexity: O(log(n))
 
 def quickSort(array):
-    startIdx = 0
+    firstIdx = 0
     lastIdx = len(array) - 1
-    quickSortHelper(array, startIdx, lastIdx)
+    quickSortHelper(firstIdx, lastIdx, array)
     return array
 
-def quickSortHelper(array, startIdx, lastIdx):
-    if startIdx >= lastIdx:
+def quickSortHelper(firstIdx, lastIdx, array):
+    if firstIdx >= lastIdx:
         return
-    pivotIdx = startIdx
-    leftIdx = startIdx + 1
-    rightIdx = lastIdx 
-    while rightIdx >= leftIdx:
-        if array[pivotIdx] < array[leftIdx] and array[pivotIdx] > array[rightIdx]:
-            swap(leftIdx,rightIdx, array)
-        elif array[leftIdx] <= array[pivotIdx]:
-            leftIdx += 1
-        elif array[rightIdx] >= array[pivotIdx]:
-            rightIdx -= 1
-    swap(rightIdx, pivotIdx, array)
-    leftSubArraySmaller = (rightIdx - 1 - startIdx) < (lastIdx - rightIdx + 1)
-    if leftSubArraySmaller:
-        quickSortHelper(array, startIdx, rightIdx - 1)
-        quickSortHelper(array, rightIdx + 1, lastIdx)
+    pivot = firstIdx
+    leftP = firstIdx + 1
+    rightP = lastIdx
+    while leftP < rightP:
+        if array[leftP] > array[pivot] and array[rightP] < array[pivot]:
+            swap(array, leftP, rightP)
+        if array[leftP] <= array[pivot]:
+            leftP += 1
+        if array[rightP] >= array[pivot]:
+            rightP -=1
+    swap(array, rightP, pivot)
+    leftSubArrayIsSmaller = (rightP - 1 - firstIdx) < (lastIdx - rightP + 1)
+    if leftSubArrayIsSmaller:
+        quickSortHelper(firstIdx, rightP - 1, array)
+        quickSortHelper(rightP + 1, lastIdx, array)
     else:
-        quickSortHelper(array, rightIdx + 1, lastIdx)
-        quickSortHelper(array, startIdx, rightIdx - 1)
-        
+        quickSortHelper(rightP + 1, lastIdx, array)
+        quickSortHelper(firstIdx, rightP - 1, array)
 
-
-
-def swap(i, j, array):
+def swap(array, i, j):
     array[i], array[j] = array[j], array[i]
-

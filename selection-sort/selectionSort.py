@@ -2,16 +2,14 @@
 
 def selectionSort(array):
     firstIdx = 0
-    lastIdx = len(array) - 1
-    lenOfArray = len(array)
-    while firstIdx != lastIdx:
+    lengthOfArray = len(array)
+    while firstIdx < lengthOfArray - 1:
         smallestIdx = firstIdx
-        for i in range(firstIdx + 1, lenOfArray):
-            if array[i] < array[smallestIdx]:
+        for i in range(firstIdx, lengthOfArray):
+            if array[smallestIdx] > array[i]:
                 smallestIdx = i
-        swap(firstIdx, smallestIdx, array)
+        swap(array, firstIdx, smallestIdx)
         firstIdx += 1
     return array
-
-def swap(i, j, array):
+def swap(array, i , j):
     array[i], array[j] = array[j], array[i]
