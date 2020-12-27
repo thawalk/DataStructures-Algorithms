@@ -14,7 +14,7 @@
 #         stack.append({"node": node.right, "depth": depth + 1})    
 #     return total
 
-# <------------------------ Iterative ----------------->
+# <------------------------ Recursive ----------------->
 # Time Complexity = O(N) | Space Complexity = O(h), where h is the height of the tree 
  
 def nodeDepths(root, depth = 0):
