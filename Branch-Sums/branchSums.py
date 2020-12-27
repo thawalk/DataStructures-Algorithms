@@ -1,3 +1,5 @@
+# Time Complexity = O(N) | Space Complexity = O(N) 
+
 class BinaryTree:
     def __init__(self, value):
         self.value = value
