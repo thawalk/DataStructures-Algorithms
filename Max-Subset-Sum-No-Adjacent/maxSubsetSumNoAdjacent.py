@@ -19,12 +19,11 @@ def maxSubsetSumNoAdjacent(array):
     if len(array) == 1: return array[0]
     idx = 2
     second = array[0]
-    first = array[1]
+    first = max(array[1], array[0])
     while idx < len(array):
         sumWithEarlier = second + array[idx]
         second = first
-        if sumWithEarlier > first:
-            first = sumWithEarlier
+        first = max(sumWithEarlier, first)
         idx += 1
     return first
 
