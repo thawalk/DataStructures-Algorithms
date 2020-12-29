@@ -1,3 +1,5 @@
+# Time Complexity = O(V+E) | Space Complexity = O(V)
+
 class Node:
     def __init__(self, name):
         self.name = name
