@@ -17,7 +17,7 @@
 # Time Complexity = O(n), single pass to get to the nth fibo number | Space Complexity = O(1), we don't store any other values other than the array
 
 def getNthFib(n):
-    # start from 3, because 0 and 1 is in the default
+    # start from 3, because 0 and 1 is in the default array
     counter = 3
     array = [0,1]
     while counter <= n:
