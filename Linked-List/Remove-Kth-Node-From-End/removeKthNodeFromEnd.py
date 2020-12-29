@@ -1,4 +1,4 @@
-# Time Complexity = O(n), because first node is  | Space Complexity = O(1) 
+# Time Complexity = O(n), because second pointer needs to traverse through all the nodes | Space Complexity = O(1) 
 
 class LinkedList:
     def __init__(self, value):
