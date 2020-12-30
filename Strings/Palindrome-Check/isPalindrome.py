@@ -2,15 +2,15 @@
 
 # Time Complexity = O(n) | Space Complexity = O(1)
 
-def isPalindrome(string):
-    leftP = 0
-    rightP = len(string) - 1
-    while leftP < rightP:
-        if string[leftP] != string[rightP]:
-            return False
-        leftP += 1
-        rightP -= 1
-    return True
+# def isPalindrome(string):
+#     leftP = 0
+#     rightP = len(string) - 1
+#     while leftP < rightP:
+#         if string[leftP] != string[rightP]:
+#             return False
+#         leftP += 1
+#         rightP -= 1
+#     return True
 
 # <----------- Using a string to store the reverse -----------> 
 
@@ -36,9 +36,9 @@ def isPalindrome(string):
 
 # Time Complexity = O(n) | Space Complexity = O(n) 
 
-# def isPalindrome(string, i = 0):
-#     j = len(string) - 1 - i
-#     if i >= j:
-#         return True
-#     else:
-#         return string[i] == string[j] and isPalindrome(string, i + 1)
+def isPalindrome(string, i = 0):
+    j = len(string) - 1 - i
+    if i >= j:
+        return True
+    else:
+        return string[i] == string[j] and isPalindrome(string, i + 1)
