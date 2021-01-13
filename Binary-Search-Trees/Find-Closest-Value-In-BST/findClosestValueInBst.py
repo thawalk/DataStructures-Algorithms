@@ -1,6 +1,6 @@
 # <---------------------- Recursive --------------------------->
 
-# Average Time Complexity = O(log(n))| Average Space Complexity = O(nlog(n))
+# Average Time Complexity = O(log(n))| Average Space Complexity = O(log(n))
 # Worst Time Complexity = O(n)| Worst Space Complexity = O(n)
 
 # def findClosestValueInBst(tree, target):

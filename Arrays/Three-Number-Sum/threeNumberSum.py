@@ -1,4 +1,4 @@
-#  Time Complexity = | Space Complexity = 
+#  Time Complexity = O(n^2)| Space Complexity = O(n)
 
 def threeNumberSum(array, targetSum):
     heapSort(array)
