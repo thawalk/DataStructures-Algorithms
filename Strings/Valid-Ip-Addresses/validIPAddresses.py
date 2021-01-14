@@ -18,7 +18,7 @@ def validIPAddresses(string):
                 currentIPAddressParts[2] = string[j:k]
                 currentIPAddressParts[3] = string[k:]
 
-                if isValidPart(currentIPAddressParts[1]) and isValidPart(currentIPAddressParts[3]):
+                if isValidPart(currentIPAddressParts[2]) and isValidPart(currentIPAddressParts[3]):
                     ipAddressesFound.append(".".join(currentIPAddressParts))
     
     return ipAddressesFound
