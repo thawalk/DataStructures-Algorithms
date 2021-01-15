@@ -20,5 +20,6 @@ class TestProgram(unittest.TestCase):
         self.assertEqual(stack.pop(), 2)
         self.assertEqual(stack.pop(), 7)
         testMinMaxPeek(self, 5, 5, 5, stack)
+        
 if __name__ == "__main__":
     unittest.main()
