@@ -4,6 +4,7 @@ class SuffixTrie:
         self.endSymbol = "*"
         self.populateSuffixTrieFrom(string)
 
+    # Time Complexity = O(n^2), where n is the number of total string | Space Complexity = O(n^2)
     def populateSuffixTrieFrom(self, string):
         for i in range(len(string)):
             self.addToTrie(i, string)
@@ -16,6 +17,7 @@ class SuffixTrie:
             node = node[string[j]]
         node[self.endSymbol] = True
 
+    # Time Complexity = O(m), where m is the number of characters in the input string that needs to be checked | O(1)
     def contains(self, string):
         node = self.root
         for char in string:
