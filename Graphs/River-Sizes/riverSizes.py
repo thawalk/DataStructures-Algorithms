@@ -37,7 +37,7 @@ def getUnvisitedNeighbours(i, j, matrix, visited):
         unvisitedNeighbours.append([i + 1, j])
     if j > 0 and not visited[i][j - 1]:
         unvisitedNeighbours.append([i, j - 1])
-    if j < len(matrix) - 1 and not visited[i][j + 1]:
+    if j < len(matrix[0]) - 1 and not visited[i][j + 1]:
         unvisitedNeighbours.append([i, j + 1])
     return unvisitedNeighbours
     
