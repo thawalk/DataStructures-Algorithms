@@ -9,10 +9,8 @@ def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
     depthOne, depthTwo = getDepth(descendantOne, topAncestor), getDepth(descendantTwo, topAncestor)
     if depthOne < depthTwo:
         return helper(descendantOne, descendantTwo, depthTwo - depthOne)
-    elif depthTwo < depthOne:
-        return helper(descendantTwo, descendantOne, depthOne - depthTwo)
     else:
-        return descendantOne
+        return helper(descendantTwo, descendantOne, depthOne - depthTwo)
 
 def getDepth(node, topAncestor):
     depth = 0
