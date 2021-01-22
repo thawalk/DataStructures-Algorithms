@@ -48,7 +48,9 @@
 #         neighbours.append([i, j + 1])
 #     return  neighbours
 
-                
+# <---------- Approach 2 ----------->
+# Time Complexity = O(wh) | Space Complexity = O(wh)
+
 def removeIslands(matrix):
     for row in range(len(matrix)):
         for col in range(len(matrix[row])):
@@ -57,7 +59,7 @@ def removeIslands(matrix):
             if horizBorder or vertBorder:
                 if matrix[row][col] == 1:
                     findOnesConnectedToBorder(matrix, row, col)
-                    
+
     for row in range(len(matrix)):
         for col in range(len(matrix[row])):
             if matrix[row][col] == 1:
