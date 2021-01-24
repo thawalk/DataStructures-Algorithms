@@ -1,3 +1,6 @@
+# <---------------- Approach 1 -------------------->
+# Time Complexity = O(v+e) | Space Complexity = O(v)
+
 def cycleInGraph(edges):
     numOfNodes = len(edges)
     visited = [False for _ in range(numOfNodes)]
@@ -26,4 +29,37 @@ def isNodeCycle(node, visited, stack, edges):
             return True
 
     stack[node] = False
+    return False
+
+# <---------------- Approach 2 -------------------->
+# Time Complexity = O(v+e) | Space Complexity = O(v)
+
+WHITE, GREY, BLACK = 0, 1, 2
+
+def cycleInGraph(edges):
+    numOfNodes = len(edges)
+    colors = [WHITE for _ in range(numOfNodes)]
+
+    for node in range(numOfNodes):
+        if colors[node] != WHITE:
+            continue
+
+        containsCycle = traverseAndColorNodes(node, colors, edges)
+        if containsCycle:
+            return True
+    return False
+
+def traverseAndColorNodes(node, colors, edges):
+    colors[node] = GREY
+    neighbours = edges[node]
+
+    for neighbour in neighbours:
+        if colors[neighbour] == WHITE:
+            containsCycle = traverseAndColorNodes(neighbour, colors, edges)
+            if containsCycle:
+                return True
+        elif colors[neighbour] == GREY:
+            return True
+
+    colors[node] = BLACK
     return False
