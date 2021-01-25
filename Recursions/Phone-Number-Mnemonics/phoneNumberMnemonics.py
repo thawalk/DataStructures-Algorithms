@@ -1,3 +1,5 @@
+# Time Complexity = O(4^n * n) | Space Complexity = O(4^n * n)
+
 def phoneNumberMnemonics(phoneNumber):
     result = []
     mnemonic = ['0' for _ in range(len(phoneNumber))]
