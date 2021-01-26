@@ -50,9 +50,6 @@ def arrayOfProducts(array):
         rightProduct *= array[i+1]
         products[i] *= rightProduct
 
-    # for i in range(len(array)):
-    #     products[i] = leftProducts[i] * rightProducts[i]
-    
     return products
     
 
