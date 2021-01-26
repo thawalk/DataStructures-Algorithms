@@ -16,25 +16,43 @@
 # <--------- Approach 2 using supplementary arrays ----------->
 # Time Complexity = O(n) | Space Complexity = O(n)
 
+# def arrayOfProducts(array):
+#     products = [1 for _ in range(len(array))]
+#     leftProducts = [1 for _ in range(len(array))]
+#     rightProducts = [1 for _ in range(len(array))]
+#     leftProduct, rightProduct = 1, 1
+
+#     for i in range(1,len(array)):
+#         leftProduct *= array[i-1]
+#         leftProducts[i] = leftProduct
+
+#     for i in reversed(range(len(array)-1)):
+#         rightProduct *= array[i+1]
+#         rightProducts[i] = rightProduct
+
+#     for i in range(len(array)):
+#         products[i] = leftProducts[i] * rightProducts[i]
+    
+#     return products
+
+# <--------- Approach 3 without using supplementary arrays ----------->
+# Time Complexity = O(n) | Space Complexity = O(n)
+
 def arrayOfProducts(array):
     products = [1 for _ in range(len(array))]
-    leftProducts = [1 for _ in range(len(array))]
-    rightProducts = [1 for _ in range(len(array))]
     leftProduct, rightProduct = 1, 1
 
     for i in range(1,len(array)):
         leftProduct *= array[i-1]
-        leftProducts[i] = leftProduct
+        products[i] *= leftProduct
 
     for i in reversed(range(len(array)-1)):
         rightProduct *= array[i+1]
-        rightProducts[i] = rightProduct
+        products[i] *= rightProduct
 
-    for i in range(len(array)):
-        products[i] = leftProducts[i] * rightProducts[i]
+    # for i in range(len(array)):
+    #     products[i] = leftProducts[i] * rightProducts[i]
     
     return products
-
-
     
 
