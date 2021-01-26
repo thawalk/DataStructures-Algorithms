@@ -21,12 +21,12 @@ def firstDuplicateValue(array):
     return -1
 
 # <--------- Approach 3 using negative values ----------->
-# Time Complexity = O(n) | Space Complexity = O(n)
+# Time Complexity = O(n) | Space Complexity = O(1)
 
 def firstDuplicateValue(array):
-    seen = set()
     for elem in array:
-        if elem in seen:
+        if array[abs(elem) - 1] < 0:
             return elem
-        seen.add(elem)
+        array[abs(elem) - 1] = -(array[abs(elem) - 1])
+    
     return -1
