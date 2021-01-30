@@ -11,7 +11,7 @@ def firstDuplicateValue(array):
             
 # <--------- Approach 2 using hashset ----------->
 # Time Complexity = O(n) | Space Complexity = O(n)
-
+ 
 def firstDuplicateValue(array):
     seen = set()
     for elem in array:
@@ -28,5 +28,7 @@ def firstDuplicateValue(array):
         if array[abs(elem) - 1] < 0:
             return elem
         array[abs(elem) - 1] = -(array[abs(elem) - 1])
-    
     return -1
+
+def ways(total, k):
+    array = [[0 for i in range()]]
