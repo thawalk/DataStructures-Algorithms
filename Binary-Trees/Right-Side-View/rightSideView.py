@@ -1,3 +1,5 @@
+# Time Complexity = O(n) | Space Complexity = O(D) where D is a tree diameter
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
