@@ -1,3 +1,5 @@
+# Time Complexity = O(n) | Space Complexity = O(d), where d is the depth of the tree
+
 class Solution:
     def convertBST(self, root):
         runningSum = 0
