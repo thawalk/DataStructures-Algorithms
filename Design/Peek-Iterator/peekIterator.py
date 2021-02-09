@@ -1,3 +1,5 @@
+# All methods Time Complexity = O(1) | Space Complexity = O(1)
+
 class PeekingIterator:
     def __init__(self, iterator):
         self._next = iterator.next()

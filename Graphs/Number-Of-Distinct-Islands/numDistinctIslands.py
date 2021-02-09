@@ -1,3 +1,5 @@
+# Time Complexity = O(nm) | Space Complexity = O(nm), where n is the number of rows, m is the number of columns
+
 class Solution:
     def numDistinctIslands(self, grid):
         if grid == None or len(grid) == 0: return 0
