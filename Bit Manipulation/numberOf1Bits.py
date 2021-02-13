@@ -1,5 +1,5 @@
 class Solution:
-    def hammingWeight(self, n: int) -> int:
+    def hammingWeight(self, n):
         bits = 0
         mask = 1
         for i in range(32):
