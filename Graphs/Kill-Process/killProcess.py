@@ -1,3 +1,5 @@
+# Time Complexity = O(n) | Space Complexity = O(n), to store the hashmap
+
 def killProcess(self, pid, ppid, kill):    
     parentChildMap = {}
     for i in range(len(ppid)):
@@ -14,6 +16,5 @@ def killProcess(self, pid, ppid, kill):
         if pop in parentChildMap:
             for elem in parentChildMap[pop]:
                 queue.append(elem)
-        
         
     return answer
