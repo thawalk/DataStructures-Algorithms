@@ -16,5 +16,4 @@ def killProcess(self, pid, ppid, kill):
         if pop in parentChildMap:
             for elem in parentChildMap[pop]:
                 queue.append(elem)
-        
     return answer
